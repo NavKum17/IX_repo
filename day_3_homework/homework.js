@@ -13,6 +13,7 @@ function print_fib(first_x = 10){
     }
 }
 
-// you can change the input to change the number of fibonacci
-// sequence number are printed, the default is 10.
+// you can add an argument to the function call to print out 
+//any number of fibonacci numbers, the default is 10.
+
 print_fib()
