@@ -1,11 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bootstrap Pre-work</title>
-</head>
-<body>
-</body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container p-1 my-1 bg-primary text-white text-center">
+      <div class="container p-1 my-1 bg-dark">
+        <h1>Welcome to my Pre-work.</h1>
+        <h2>Name: Naveen Kumanan</h2>
+        <h2>Github: NavKum17</h2>
+      </div>
+
+      <div class="container p-1 my-1 bg-secondary">
+        <img
+        class="rounded mx-auto d-block"
+        src="images/Handshake Picture.jpg"
+        alt="Picture of Naveen"
+        height="200px"
+        width="150px"/>
+      <figcaption>A picture of me.</figcaption>
+    </figure>
+      </div>
+
+      <div class="container p-1 my-1 bg-dark">
+        <h2>A little bit about me:</h2>
+        <h3>I am a CSE major at Michican State University, I am
+            from Chennai, India and that is also where I will be 
+            doing this course from.
+            I joined this course with the goal of gaining the
+            skills to become a successfull web developer.
+        </h3>
+      </div>
+
+      <div class="container d-flex p-1 my-1 bg-secondary">
+        <div class="col-auto p-2 m-2">
+            <label for="inputPassword6" class="col-form-label">Password:</label>
+        </div>
+        <div class="col-auto p-2 m-2">
+            <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+        </div>
+        <div class="mb-3 form-check p-2 m-2">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <div class="form-check p-2 m-2">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Radio Box
+            </label>
+        </div>
+        
+      </div>
+
+    </div>
+  </body>
 </html>
