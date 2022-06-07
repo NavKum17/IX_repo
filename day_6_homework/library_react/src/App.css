@@ -1,0 +1,11 @@
+body {
+  justify-items: center;
+}
+
+.parent {
+  background-color: darkgrey;
+  width: 80%;
+  height: 80%;
+  margin: 3rem;
+  padding: 2rem;
+}
