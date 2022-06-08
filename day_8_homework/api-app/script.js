@@ -24,6 +24,17 @@ async function getPokeDeets(name) {
     return response.json();
 }
 
+async function getMoveDesc(url) {
+    const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Tye': 'application/json',
+        }
+    })
+
+    return response.json();
+}
+
 async function moreInfo(e, name) {
     tableBody.innerHTML = "";
     tableHead.innerHTML = "";
@@ -31,25 +42,34 @@ async function moreInfo(e, name) {
     // table head work
     const tr = document.createElement('tr');
     const th = document.createElement('th');
+    const thDesc = document.createElement('th');
 
     th.innerHTML = 'Abilities';
+    thDesc.innerHTML = 'Description'
 
-    th.appendChild(tr);
-    tableHead.appendChild(th);
+    tr.appendChild(th);
+    tr.appendChild(thDesc);
+    tableHead.appendChild(tr);
     
     // table body work
-    details = await getPokeDeets(name);
+    const details = await getPokeDeets(name);
     const abilities = details.abilities;
 
     for (let i=0; i<abilities.length; i++) {
         const tr = document.createElement('tr');
         const td = document.createElement('td');
+        const tdDesc = document.createElement('td');
 
         td.innerHTML = abilities[i].ability.name;
-        tr.appendChild(td);
-        tableBody.appendChild(tr);
 
-        console.log(abilities[i].ability.name);
+        // get description of ability
+        const description = await getMoveDesc(abilities[i].ability.url);
+
+        tdDesc.innerHTML = description.effect_entries[1].effect;
+
+        tr.appendChild(td);
+        tr.appendChild(tdDesc);
+        tableBody.appendChild(tr);
     }
 
 }
